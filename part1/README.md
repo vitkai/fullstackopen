@@ -1,3 +1,15 @@
+# Part1 Tutorial
+https://fullstackopen.com/en/part1/introduction_to_react
+
+## Let's create an application called part1 and navigate to its directory.
+`npx create-react-app part1`
+`cd part1`
+
+## The application runs as follows
+
+`npm start`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
