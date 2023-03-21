@@ -2,10 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 const Hello = (props) => {
-  console.log(props)
-  return (
+  const bornYear = () => {
+    const yearNow = new Date().getFullYear()
+    return yearNow - props.age
+  }
+  return(
     <div>
-      Hello {props.name}, you are {props.age} years old
+    <p>Hello {props.name}. Your age is {props.age}.</p>
+    <p>So you were probably born in {bornYear()}</p>
     </div>
   )
 }
@@ -35,10 +39,9 @@ function App() {
       <p>
         {a} plus {b} is {a + b}
       </p>
-      <Hello name='Maya' age={26 + 10} />
+      <Hello name='Diana' age={26 + 10} />
       <div>
-        <p>{friends[0]}</p>
-        <p>{friends[1]}</p>
+        <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
     </div>
   );
