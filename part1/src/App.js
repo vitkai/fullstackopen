@@ -1,14 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-const Hello = (props) => {
-  const bornYear = () => {
-    const yearNow = new Date().getFullYear()
-    return yearNow - props.age
-  }
+const Hello = ({name, age}) => {
+    const bornYear = () => new Date().getFullYear() - age
   return(
     <div>
-    <p>Hello {props.name}. Your age is {props.age}.</p>
+    <p>Hello {name}. Your age is {age}.</p>
     <p>So you were probably born in {bornYear()}</p>
     </div>
   )
