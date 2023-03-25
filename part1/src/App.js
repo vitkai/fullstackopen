@@ -11,7 +11,8 @@ const Hello = ({name, age}) => {
   )
 }
 
-function App() {
+function App(props) {
+  const {counter} = props
   const now = new Date()
   const a = 10
   const b = 20
@@ -40,6 +41,7 @@ function App() {
       <div>
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
+      <div>Counter: {counter}</div>
     </div>
   );
 }
