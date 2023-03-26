@@ -15,12 +15,13 @@ const Hello = ({name, age}) => {
 function App(props) {
   const [ counter, setCounter ] = useState(0)
 
-  setTimeout(
-    () => setCounter(counter + 1),
-    1000
-  )
+  // setTimeout(
+  //   () => setCounter(counter + 1),
+  //   1000
+  // )
 
   const handleClick = () => {
+    setCounter(counter + 1)
     console.log('clicked')
   }
 
@@ -55,6 +56,9 @@ function App(props) {
       <div>Counter: {counter}</div>
       <button onClick={handleClick}>
         plus
+      </button>
+      <button onClick={() => setCounter(0)}> 
+        zero
       </button>
     </div>
   );
