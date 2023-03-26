@@ -16,8 +16,25 @@ function App(props) {
   const [ counter, setCounter ] = useState(0)
   console.log('rendering with counter value', counter)
 
-  const [left, setLeft] = useState(0)
-  const [right, setRight] = useState(0)
+  const [clicks, setClicks] = useState({
+    left: 0, right: 0
+  })
+
+  const handleLeftClick = () => {
+    const newClicks = { 
+      left: clicks.left + 1, 
+      right: clicks.right 
+    }
+    setClicks(newClicks)
+  }
+
+  const handleRightClick = () => {
+    const newClicks = { 
+      left: clicks.left, 
+      right: clicks.right + 1 
+    }
+    setClicks(newClicks)
+  }
 
   // setTimeout(
   //   () => setCounter(counter + 1),
@@ -51,48 +68,44 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        </header>
-        <p>
-          {a} plus {b} is {a + b}
-        </p>
-        <Hello name='Diana' age={26 + 10} />
-        <div>
-          <p>Friends: {friends[0]}, {friends[1]}</p>
-        </div>
-        <Display counter={counter}/>
-        <Button
-          handleClick={increaseByOne}
-          text='plus'
-        />
-        <Button
-          handleClick={setToZero}
-          text='zero'
-        />     
-        <Button
-          handleClick={decreaseByOne}
-          text='minus'
-        />
-        <div>
-        {left}
-        <button onClick={() => setLeft(left + 1)}>
-          left
-        </button>
-        <button onClick={() => setRight(right + 1)}>
-          right
-        </button>
-        {right}
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </a>
+      </header>
+      <p>
+        {a} plus {b} is {a + b}
+      </p>
+      <Hello name='Diana' age={26 + 10} />
+      <div>
+        <p>Friends: {friends[0]}, {friends[1]}</p>
+      </div>
+      <Display counter={counter}/>
+      <Button
+        handleClick={increaseByOne}
+        text='plus'
+      />
+      <Button
+        handleClick={setToZero}
+        text='zero'
+      />     
+      <Button
+        handleClick={decreaseByOne}
+        text='minus'
+      />
+      <div>
+        {clicks.left}
+        <button onClick={handleLeftClick}>left</button>
+        <button onClick={handleRightClick}>right</button>
+        {clicks.right}
       </div>
     </div>
   );
