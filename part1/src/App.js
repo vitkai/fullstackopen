@@ -19,17 +19,19 @@ function App(props) {
   const [clicks, setClicks] = useState({
     left: 0, right: 0
   })
-
   const [allClicks, setAll] = useState([])
+  const [total, setTotal] = useState(0)
 
   const handleLeftClick = () => {
     setAll(allClicks.concat('L'))
     setClicks({ ...clicks, left: clicks.left + 1 })
+    setTotal(total + 1)
   }
 
   const handleRightClick = () => {
     setAll(allClicks.concat('R'))
     setClicks({ ...clicks, right: clicks.right + 1 })
+    setTotal(total + 1)
   }
 
   // setTimeout(
@@ -41,21 +43,31 @@ function App(props) {
     console.log('increasing, value before', counter)
     setAll(allClicks.concat('+'))
     setCounter(counter + 1)
+    setTotal(total + 1)
   }
 
   const decreaseByOne = () => { 
     console.log('decreasing, value before', counter)
     setAll(allClicks.concat('-'))
     setCounter(counter - 1)
+    setTotal(total + 1)
   }
 
   const setToZero = () => {
     console.log('resetting to zero, value before', counter)
     setAll(allClicks.concat('0'))
     setCounter(0)
+    setTotal(total + 1)
   }
 
-  const Display = ({ counter }) => <div>{counter}</div>
+  const Display = ({ counter, total }) => {
+    return(
+      <div>
+        <p>Counter: {counter}</p>
+        <p>Total: {total}</p>
+      </div>
+    )
+  }
 
   const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>
   
@@ -87,7 +99,7 @@ function App(props) {
       <div>
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
-      <Display counter={counter}/>
+      <Display counter={counter} total={total} />
       <Button
         handleClick={increaseByOne}
         text='plus'
