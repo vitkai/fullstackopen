@@ -20,6 +20,10 @@ function App(props) {
     1000
   )
 
+  const handleClick = () => {
+    console.log('clicked')
+  }
+
   const now = new Date()
   const a = 10
   const b = 20
@@ -49,6 +53,9 @@ function App(props) {
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
       <div>Counter: {counter}</div>
+      <button onClick={handleClick}>
+        plus
+      </button>
     </div>
   );
 }
