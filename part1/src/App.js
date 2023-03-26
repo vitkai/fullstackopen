@@ -16,6 +16,9 @@ function App(props) {
   const [ counter, setCounter ] = useState(0)
   console.log('rendering with counter value', counter)
 
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
+
   // setTimeout(
   //   () => setCounter(counter + 1),
   //   1000
@@ -60,27 +63,37 @@ function App(props) {
         >
           Learn React
         </a>
-      </header>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
-      <Hello name='Diana' age={26 + 10} />
-      <div>
-        <p>Friends: {friends[0]}, {friends[1]}</p>
+        </header>
+        <p>
+          {a} plus {b} is {a + b}
+        </p>
+        <Hello name='Diana' age={26 + 10} />
+        <div>
+          <p>Friends: {friends[0]}, {friends[1]}</p>
+        </div>
+        <Display counter={counter}/>
+        <Button
+          handleClick={increaseByOne}
+          text='plus'
+        />
+        <Button
+          handleClick={setToZero}
+          text='zero'
+        />     
+        <Button
+          handleClick={decreaseByOne}
+          text='minus'
+        />
+        <div>
+        {left}
+        <button onClick={() => setLeft(left + 1)}>
+          left
+        </button>
+        <button onClick={() => setRight(right + 1)}>
+          right
+        </button>
+        {right}
       </div>
-      <Display counter={counter}/>
-      <Button
-        handleClick={increaseByOne}
-        text='plus'
-      />
-      <Button
-        handleClick={setToZero}
-        text='zero'
-      />     
-      <Button
-        handleClick={decreaseByOne}
-        text='minus'
-      />           
     </div>
   );
 }
