@@ -36,20 +36,10 @@ function App(props) {
     setCounter(0)
   }
 
-  const Display = (props) => {
-    return (
-      <div>Counter: {props.counter}</div>
-    )
-  }
+  const Display = ({ counter }) => <div>{counter}</div>
 
-  const Button = (props) => {
-    return (
-      <button onClick={props.handleClick}>
-        {props.text}
-      </button>
-    )
-  }
-
+  const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>
+  
   const now = new Date()
   const a = 10
   const b = 20
