@@ -39,16 +39,19 @@ function App(props) {
 
   const increaseByOne = () => {
     console.log('increasing, value before', counter)
+    setAll(allClicks.concat('+'))
     setCounter(counter + 1)
   }
 
   const decreaseByOne = () => { 
     console.log('decreasing, value before', counter)
+    setAll(allClicks.concat('-'))
     setCounter(counter - 1)
   }
 
   const setToZero = () => {
     console.log('resetting to zero, value before', counter)
+    setAll(allClicks.concat('0'))
     setCounter(0)
   }
 
