@@ -20,16 +20,21 @@ function App(props) {
   //   1000
   // )
 
-  const handleClick = () => {
-    setCounter(counter + 1)
-    console.log('clicked')
-  }
-
+  const increaseByOne = () => setCounter(counter + 1)
+  const decreaseByOne = () => setCounter(counter - 1)
   const setToZero = () => setCounter(0)
 
   const Display = (props) => {
     return (
       <div>Counter: {props.counter}</div>
+    )
+  }
+
+  const Button = (props) => {
+    return (
+      <button onClick={props.handleClick}>
+        {props.text}
+      </button>
     )
   }
 
@@ -62,12 +67,18 @@ function App(props) {
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
       <Display counter={counter}/>
-      <button onClick={handleClick}>
-        plus
-      </button>
-      <button onClick={setToZero}> 
-        zero
-      </button>
+      <Button
+        handleClick={increaseByOne}
+        text='plus'
+      />
+      <Button
+        handleClick={setToZero}
+        text='zero'
+      />     
+      <Button
+        handleClick={decreaseByOne}
+        text='minus'
+      />           
     </div>
   );
 }
