@@ -25,6 +25,14 @@ function App(props) {
     console.log('clicked')
   }
 
+  const setToZero = () => setCounter(0)
+
+  const Display = (props) => {
+    return (
+      <div>Counter: {props.counter}</div>
+    )
+  }
+
   const now = new Date()
   const a = 10
   const b = 20
@@ -53,11 +61,11 @@ function App(props) {
       <div>
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
-      <div>Counter: {counter}</div>
+      <Display counter={counter}/>
       <button onClick={handleClick}>
         plus
       </button>
-      <button onClick={() => setCounter(0)}> 
+      <button onClick={setToZero}> 
         zero
       </button>
     </div>
