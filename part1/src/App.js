@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +13,13 @@ const Hello = ({name, age}) => {
 }
 
 function App(props) {
-  const {counter} = props
+  const [ counter, setCounter ] = useState(0)
+
+  setTimeout(
+    () => setCounter(counter + 1),
+    1000
+  )
+
   const now = new Date()
   const a = 10
   const b = 20
