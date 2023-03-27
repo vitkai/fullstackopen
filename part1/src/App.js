@@ -27,6 +27,17 @@ const History = (props) => {
   )
 }
 
+const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>
+
+const Display = ({ counter, total }) => {
+  return(
+    <div>
+      <p>Counter: {counter}</p>
+      <p>Total: {total}</p>
+    </div>
+  )
+}
+
 function App(props) {
   const [ counter, setCounter ] = useState(0)
   console.log('rendering with counter value', counter)
@@ -75,17 +86,6 @@ function App(props) {
     setTotal(total + 1)
   }
 
-  const Display = ({ counter, total }) => {
-    return(
-      <div>
-        <p>Counter: {counter}</p>
-        <p>Total: {total}</p>
-      </div>
-    )
-  }
-
-  const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>
-  
   const now = new Date()
   const a = 10
   const b = 20
@@ -115,22 +115,13 @@ function App(props) {
         <p>Friends: {friends[0]}, {friends[1]}</p>
       </div>
       <Display counter={counter} total={total} />
-      <Button
-        handleClick={increaseByOne}
-        text='plus'
-      />
-      <Button
-        handleClick={setToZero}
-        text='zero'
-      />     
-      <Button
-        handleClick={decreaseByOne}
-        text='minus'
-      />
+      <Button handleClick={increaseByOne} text='plus' />
+      <Button handleClick={setToZero} text='zero' />     
+      <Button handleClick={decreaseByOne} text='minus' />
       <div>
         {clicks.left}
-        <button onClick={handleLeftClick}>left</button>
-        <button onClick={handleRightClick}>right</button>
+        <Button handleClick={handleLeftClick} text='left' />
+        <Button handleClick={handleRightClick} text='right' />
         {clicks.right}
       </div>
       <History allClicks={allClicks} />
