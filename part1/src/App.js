@@ -39,6 +39,13 @@ const Display = ({ counter, total }) => {
 }
 
 function App(props) {
+  const [value, setValue] = useState(10)
+
+  const setToValue = (newValue) => {
+    console.log('value now', newValue)
+    setValue(newValue)
+  }
+
   const [ counter, setCounter ] = useState(0)
   console.log('rendering with counter value', counter)
 
@@ -125,7 +132,20 @@ function App(props) {
         {clicks.right}
       </div>
       <History allClicks={allClicks} />
+      <div>
+        {value}
+        <button onClick={() => setToValue(1000)}>
+          thousand
+        </button>
+        <button onClick={() => setToValue(0)}>
+          reset
+        </button>
+        <button onClick={() => setToValue(value + 1)}>
+          increment
+        </button>
+      </div>
     </div>
+    
   );
 }
 
