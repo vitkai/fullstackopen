@@ -4,6 +4,10 @@ import Note from './components/Note'
 const App = (props) => {
   const [notes, setNotes] = useState(props.notes)
 
+  const [newNote, setNewNote] = useState(
+    'a new note...'
+  ) 
+
   const addNote = (event) => {
     event.preventDefault()
     console.log('button clicked', event.target)
@@ -18,7 +22,7 @@ const App = (props) => {
         )}
       </ul>
       <form onSubmit={addNote}>
-        <input />
+        <input value={newNote} />
         <button type="submit">save</button>
       </form>   
     </div>
