@@ -1,5 +1,16 @@
-# Part1 Tutorial
-https://fullstackopen.com/en/part1/introduction_to_react
+# Part2 Tutorial
+https://fullstackopen.com/en/part2/
+
+## json-server
+### Install json-server
+You can install a JSON server globally on your machine using the command npm install -g json-server. A global installation requires administrative privileges.
+`npm install -g json-server`
+
+### Run json-server
+`json-server --port 3001 --watch db.json`
+
+However, a global installation is not necessary. From the root directory of your app, we can run the json-server using the command npx
+`npx json-server --port 3001 --watch db.json`
 
 ## Let's create an application called part1 and navigate to its directory.
 `npx create-react-app part1`
@@ -80,3 +91,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
