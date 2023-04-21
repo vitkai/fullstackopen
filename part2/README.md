@@ -16,6 +16,9 @@ However, a global installation is not necessary. From the root directory of your
 `npx create-react-app part1`
 `cd part1`
 
+## Install axios
+`npm install axios`
+
 ## The application runs as follows
 
 `npm start`
