@@ -9,6 +9,10 @@ const App = () => {
     'a new note...'
   ) 
 
+  const toggleImportanceOf = (id) => {
+    console.log('importance of ' + id + ' needs to be toggled')
+  }
+
   useEffect(() => {
     console.log('effect')
     axios
@@ -56,7 +60,11 @@ const App = () => {
       </div>
       <ul>
       {notesToShow.map(note => 
-          <Note key={note.id} note={note} />
+          <Note
+          key={note.id}
+          note={note} 
+          toggleImportance={() => toggleImportanceOf(note.id)}
+        />
         )}
       </ul>
       <form onSubmit={addNote}>
