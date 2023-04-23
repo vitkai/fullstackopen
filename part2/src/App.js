@@ -10,7 +10,7 @@ const App = () => {
   const [newNote, setNewNote] = useState(
     'a new note...'
   )
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState(null)
 
   const toggleImportanceOf = id => {
     const url = `http://localhost:3001/notes/${id}`
