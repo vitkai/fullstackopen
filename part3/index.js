@@ -10,6 +10,14 @@ app.use(cors())
 
 const mongoose = require('mongoose')
 
+if (process.argv.length<4) {
+  console.log('give username and password as argument')
+  process.exit(1)
+}
+
+const username = process.argv[2]
+const password = process.argv[3]
+
 const url =
   `mongodb+srv://${username}:${password}@cluster0.f6w894j.mongodb.net/noteApp?retryWrites=true&w=majority`
 
