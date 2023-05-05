@@ -30,3 +30,7 @@ update package.json
 
 and
 `npm run dev`
+
+## MongoDB
+### install driver
+`npm install mongoose`

@@ -10,14 +10,15 @@
     "unix_build:ui": "rm -rf build && cd ../part2-notes/ && npm run build && cp -r build ../notes-backend",
     "build:ui": "@powershell $FName = 'build'; if (Test-Path $FName) { Remove-Item -Recurse -Force $FName }; cd ../part2; npm run build; Copy-Item $FName -Destination ../part3 -Recurse; cd ../part3",
     "deploy": "gcloud app deploy",
-    "deploy:full": "npm run build:ui && npm run deploy",    
+    "deploy:full": "npm run build:ui && npm run deploy",
     "app:open": "gcloud app browse"
   },
   "author": "Vitkai",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
