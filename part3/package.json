@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "unix_build:ui": "rm -rf build && cd ../part2-notes/ && npm run build && cp -r build ../notes-backend",
-    "build:ui": "@powershell Remove-Item -Recurse -Force build && cd ../part2 && npm run build && @powershell Copy-Item build -Recurse ../part3",
+    "build:ui": "@powershell $FName = 'build'; if (Test-Path $FName) { Remove-Item -Recurse -Force $FName }; cd ../part2; npm run build; Copy-Item $FName -Destination ../part3 -Recurse",
     "deploy": "gcloud app deploy",
     "deploy:full": "npm run build:ui && npm run deploy",    
     "app:open": "gcloud app browse"
