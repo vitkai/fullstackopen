@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Footer from './components/Footer'
 import Note from './components/Note'
 import Notification from './components/Notification'
@@ -14,7 +13,6 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState(null)
 
   const toggleImportanceOf = id => {
-    const url = `http://localhost:3001/notes/${id}`
     const note = notes.find(n => n.id === id)
     const changedNote = { ...note, important: !note.important }
   
