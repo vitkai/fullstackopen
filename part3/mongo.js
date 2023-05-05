@@ -9,7 +9,7 @@ const username = process.argv[2]
 const password = process.argv[3]
 
 const url =
-  `mongodb+srv://${username}:${password}@cluster0.f6w894j.mongodb.net/?retryWrites=true&w=majority`
+  `mongodb+srv://${username}:${password}@cluster0.f6w894j.mongodb.net/noteApp?retryWrites=true&w=majority`
 
 mongoose.set('strictQuery',false)
 mongoose.connect(url)
