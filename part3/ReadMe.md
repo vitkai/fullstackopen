@@ -38,3 +38,13 @@ and
 ## dotenv
 ### install
 `npm install dotenv`
+
+## ESlint 
+### install
+`npm install eslint --save-dev`
+
+### initialize a default ESlint configuration
+`npx eslint --init`
+
+### Inspecting and validating a file like index.js can be done with the following command:
+`npx eslint index.js`

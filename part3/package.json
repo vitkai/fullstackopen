@@ -11,7 +11,8 @@
     "build:ui": "@powershell $FName = 'build'; if (Test-Path $FName) { Remove-Item -Recurse -Force $FName }; cd ../part2; npm run build; Copy-Item $FName -Destination ../part3 -Recurse; cd ../part3",
     "deploy": "gcloud app deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "app:open": "gcloud app browse"
+    "app:open": "gcloud app browse",
+    "lint": "eslint ."
   },
   "author": "Vitkai",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "mongoose": "^7.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.40.0",
     "nodemon": "^2.0.22"
   }
 }
