@@ -1,8 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
 app.use(express.json())
 app.use(express.static('build'))
+
+const Note = require('./models/note')
 
 const cors = require('cors')
 

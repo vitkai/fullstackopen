@@ -34,3 +34,7 @@ and
 ## MongoDB
 ### install driver
 `npm install mongoose`
+
+## dotenv
+### install
+`npm install dotenv`
