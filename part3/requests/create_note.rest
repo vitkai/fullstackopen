@@ -2,18 +2,18 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-    "content": "Postman is good in testing backend",
+    "content": "Testing one more time",
     "important": true
 }
 
 ###
-DELETE  http://localhost:3001/api/notes/645604cd7ee5ff65b56b1947
+DELETE  http://localhost:3001/api/notes/6456a0581b65702a48342944
 
 ###
 PUT  http://localhost:3001/api/notes/6455fbca119382ba1b528236
 Content-Type: application/json
 
 {
-    "content": "Postman is a good tool in testing backend",
+    "content": "Postman is a good tool for backend testing",
     "important": true
 }

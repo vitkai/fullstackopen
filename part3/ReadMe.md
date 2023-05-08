@@ -48,3 +48,11 @@ and
 
 ### Inspecting and validating a file like index.js can be done with the following command:
 `npx eslint index.js`
+
+## Testing
+### install jest
+`npm install --save-dev jest`
+
+### run tests
+`npm test`
+
