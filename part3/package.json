@@ -29,6 +29,7 @@
     "nodemon": "^2.0.22"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "globalTeardown": "./tests/teardown.js"
   }
 }

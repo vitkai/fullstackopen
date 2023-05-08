@@ -64,3 +64,8 @@ and
 NB: If you are deploying this application to Fly.io/Render, keep in mind that if cross-env is saved as a development dependency, it would cause an application error on your web server. To fix this, change cross-env to a production dependency by running this in the command line:
 `npm install cross-env`
 
+## supertest
+Let's use the supertest package to help us write our tests for testing the API.
+### install
+`npm install --save-dev supertest`
+
