@@ -56,6 +56,13 @@ and
 ### run tests
 `npm test`
 
+#### Running tests one by one
+`npm test -- tests/note_api.test.js`
+
+The -t option can be used for running tests with a specific name:
+
+`npm test -- -t "a specific note is within the returned notes"`
+
 ## cross-env package
 ### install
 `npm install --save-dev cross-env`
