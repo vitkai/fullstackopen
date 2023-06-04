@@ -60,8 +60,10 @@ and
 `npm test -- tests/note_api.test.js`
 
 The -t option can be used for running tests with a specific name:
-
 `npm test -- -t "a specific note is within the returned notes"`
+
+The following command will run all of the tests that contain notes in their name:
+`npm test -- -t 'notes'`
 
 ## cross-env package
 ### install
@@ -76,3 +78,7 @@ Let's use the supertest package to help us write our tests for testing the API.
 ### install
 `npm install --save-dev supertest`
 
+
+# Currently stopped on
+https://fullstackopen.com/en/part4/testing_the_backend
+async/await
