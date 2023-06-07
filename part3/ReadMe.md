@@ -85,9 +85,17 @@ Let's use the supertest package to help us write our tests for testing the API.
 Because of the library, we do not need the next(exception) call anymore. The library handles everything under the hood. If an exception occurs in an async route, the execution is automatically passed to the error handling middleware.
 
 
+## bcrypt
+### install the bcrypt package for generating the password hashes:
+`npm install bcrypt`
+
+## mongoose-unique-validator
+### Let us install the library:
+`npm install mongoose-unique-validator`
+
 # Currently stopped on
-https://fullstackopen.com/en/part4/testing_the_backend
-Refactoring tests
+https://fullstackopen.com/en/part4/user_administration
+Creating a new note
 
 
 # A true full stack developer's oath
