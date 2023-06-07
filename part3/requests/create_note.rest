@@ -8,6 +8,9 @@ Content-Type: application/json
 }
 
 ###
+GET  http://localhost:3001/api/notes
+
+###
 DELETE  http://localhost:3001/api/notes/6456a0581b65702a48342944
 
 ###
