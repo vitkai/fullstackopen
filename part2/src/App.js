@@ -128,8 +128,10 @@ const App = () => {
       <h1>Notes</h1>
       <Notification message={errorMessage} />
       
-      {user === null && loginForm()}
-      {user !== null && noteForm()}
+      {user === null ?
+        loginForm() :
+        noteForm()
+      }
 
       <div>
         <button onClick={() => setShowAll(!showAll)}>
@@ -145,13 +147,6 @@ const App = () => {
         />
         )}
       </ul>
-      <form onSubmit={addNote}>
-        <input
-          value={newNote}
-          onChange={handleNoteChange}
-        />
-        <button type="submit">save</button>
-      </form>
       <Footer />
     </div>
   )
