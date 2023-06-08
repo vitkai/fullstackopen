@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import Note from './components/Note'
 import Notification from './components/Notification'
 import noteService from './services/notes'
+import loginService from './services/login'
 
 const App = () => {
   const [notes, setNotes] = useState([])
@@ -14,6 +15,25 @@ const App = () => {
 
   const [username, setUsername] = useState('') 
   const [password, setPassword] = useState('') 
+  const [user, setUser] = useState(null)
+
+  const handleLogin = async (event) => {
+    event.preventDefault()
+    
+    try {
+      const user = await loginService.login({
+        username, password,
+      })
+      setUser(user)
+      setUsername('')
+      setPassword('')
+    } catch (exception) {
+      setErrorMessage('Wrong credentials')
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+    }
+  }
 
   const toggleImportanceOf = id => {
     const note = notes.find(n => n.id === id)
@@ -44,11 +64,6 @@ const App = () => {
       })
   }, [])
 
-  const handleLogin = (event) => {
-    event.preventDefault()
-    console.log('logging in with', username, password)
-  }
-
   console.log('render', notes.length, 'notes')
 
   const addNote = event => {
@@ -74,11 +89,7 @@ const App = () => {
     ? notes
     : notes.filter(note => note.important)
 
-  return (
-    <div>
-      <h1>Notes</h1>
-      <Notification message={errorMessage} />
-      
+  const loginForm = () => (
       <form onSubmit={handleLogin}>
         <div>
           username
@@ -99,8 +110,27 @@ const App = () => {
           />
         </div>
         <button type="submit">login</button>
-      </form>
+      </form>      
+    )
+  
+  const noteForm = () => (
+      <form onSubmit={addNote}>
+        <input
+          value={newNote}
+          onChange={handleNoteChange}
+        />
+        <button type="submit">save</button>
+      </form>  
+    )
+  
+  return (
+    <div>
+      <h1>Notes</h1>
+      <Notification message={errorMessage} />
       
+      {user === null && loginForm()}
+      {user !== null && noteForm()}
+
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all' }
