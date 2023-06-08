@@ -101,7 +101,7 @@ library, which allows us to generate JSON web tokens.
 
 # Currently stopped on
 https://fullstackopen.com/en/part4/token_authentication
-Limiting creating new notes to logged-in users
+Problems of Token-based authentication
 
 
 # A true full stack developer's oath
