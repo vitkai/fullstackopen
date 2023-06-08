@@ -93,9 +93,15 @@ Because of the library, we do not need the next(exception) call anymore. The lib
 ### Let us install the library:
 `npm install mongoose-unique-validator`
 
+## jsonwebtoken 
+library, which allows us to generate JSON web tokens.
+### install
+`npm install jsonwebtoken`
+
+
 # Currently stopped on
-https://fullstackopen.com/en/part4/user_administration
-Populate
+https://fullstackopen.com/en/part4/token_authentication
+Limiting creating new notes to logged-in users
 
 
 # A true full stack developer's oath
