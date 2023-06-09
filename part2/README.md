@@ -96,6 +96,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+## Development
+### window.localStorage
+It's possible to log out a user using the console, and that is enough for now. You can log out with the command:
+
+`window.localStorage.removeItem('loggedNoteappUser')`
+
+or with the command which empties localstorage completely:
+
+`window.localStorage.clear()`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/login_in_frontend
