@@ -108,5 +108,5 @@ or with the command which empties localstorage completely:
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part5/login_in_frontend
-Saving the token to the browser's local storage
+https://fullstackopen.com/en/part5/props_children_and_proptypes
+The components children, aka. props.children
