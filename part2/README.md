@@ -109,4 +109,4 @@ or with the command which empties localstorage completely:
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/props_children_and_proptypes
-The components children, aka. props.children
+One point about components
