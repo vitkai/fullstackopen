@@ -18,7 +18,6 @@ const App = () => {
   const [username, setUsername] = useState('') 
   const [password, setPassword] = useState('') 
   const [user, setUser] = useState(null)
-  const [loginVisible, setLoginVisible] = useState(false)
 
   const handleLogin = async (event) => {
     event.preventDefault()
@@ -120,15 +119,31 @@ const App = () => {
       </Togglable>
     )
   }
+
+  const NoteForm = ({ onSubmit, handleChange, value}) => {
+    return (
+      <div>
+        <h2>Create a new note</h2>
+  
+        <form onSubmit={onSubmit}>
+          <input
+            value={value}
+            onChange={handleChange}
+          />
+          <button type="submit">save</button>
+        </form>
+      </div>
+    )
+  }
   
   const noteForm = () => (
-      <form onSubmit={addNote}>
-        <input
+      <Togglable buttonLabel="new note">
+        <NoteForm
+          onSubmit={addNote}
           value={newNote}
-          onChange={handleNoteChange}
+          handleChange={handleNoteChange}
         />
-        <button type="submit">save</button>
-      </form>  
+      </Togglable>
     )
   
   return (
