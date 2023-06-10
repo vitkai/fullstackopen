@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Footer from './components/Footer'
 import Note from './components/Note'
+import NoteForm from './components/NoteForm'
 import LoginForm from './components/Login'
 import Togglable from './components/Togglable'
 import Notification from './components/Notification'
@@ -120,22 +121,6 @@ const App = () => {
     )
   }
 
-  const NoteForm = ({ onSubmit, handleChange, value}) => {
-    return (
-      <div>
-        <h2>Create a new note</h2>
-  
-        <form onSubmit={onSubmit}>
-          <input
-            value={value}
-            onChange={handleChange}
-          />
-          <button type="submit">save</button>
-        </form>
-      </div>
-    )
-  }
-  
   const noteForm = () => (
       <Togglable buttonLabel="new note">
         <NoteForm
