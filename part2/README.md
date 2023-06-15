@@ -118,10 +118,25 @@ We will start testing the frontend and in order to avoid undesired and irrelevan
 run:
 `npm run eslint`
 
+### testing-library
+In addition to Jest, we also need another testing library that will help us render components for testing purposes. The current best option for this is react-testing-library which has seen rapid growth in popularity in recent times.
+
+install:
+`npm install --save-dev @testing-library/react @testing-library/jest-dom`
+
+#### Running tests
+Create-react-app configures tests to be run in watch mode by default, which means that the npm test command will not exit once the tests have finished, and will instead wait for changes to be made to the code. Once new changes to the code are saved, the tests are executed automatically after which Jest goes back to waiting for new changes to be made.
+
+If you want to run tests "normally", you can do so with the command:
+`CI=true npm testcopy`
+
+For Windows (PowerShell) users
+`$env:CI=$true; npm test`
+`$env:CI=$true; npm test -- src/components/Note.test.js`
 
 # Currently stopped on
-https://fullstackopen.com/en/part5/props_children_and_proptypes
-ESlint
+https://fullstackopen.com/en/part5/testing_react_apps
+Test file location
 
 
 # A true full stack developer's oath
