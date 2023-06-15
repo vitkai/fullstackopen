@@ -111,10 +111,17 @@ The expected and required props of a component can be defined with the prop-type
 Let's install the package:
 `npm install prop-types`
 
+### eslint-plugin-jest
+We will start testing the frontend and in order to avoid undesired and irrelevant linter errors we will install the eslint-plugin-jest package:
+`npm install --save-dev eslint-plugin-jest`
+
+run:
+`npm run eslint`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/props_children_and_proptypes
-PropTypes
+ESlint
 
 
 # A true full stack developer's oath
