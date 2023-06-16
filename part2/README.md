@@ -136,7 +136,7 @@ For Windows (PowerShell) users
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/testing_react_apps
-Test file location
+Searching for content in a component
 
 
 # A true full stack developer's oath
