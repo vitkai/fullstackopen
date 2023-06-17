@@ -155,7 +155,7 @@ It was required to execute
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/testing_react_apps
-Tests for the Togglable component
+Testing the forms
 
 
 # A true full stack developer's oath
