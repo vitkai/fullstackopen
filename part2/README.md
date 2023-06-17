@@ -134,9 +134,28 @@ For Windows (PowerShell) users
 `$env:CI=$true; npm test`
 `$env:CI=$true; npm test -- src/components/Note.test.js`
 
+### user-event 
+makes simulating user input a bit easier
+`npm install --save-dev @testing-library/user-event`
+
+To fix the below issue 
+```    TypeError: _userEvent.default.setup is not a function
+
+      38 |   )
+      39 |
+    > 40 |   const user = userEvent.setup()
+         |                          ^
+      41 |   const button = screen.getByText('make not important')
+      42 |   await user.click(button)
+```
+
+It was required to execute 
+`npm install --save-dev @testing-library/user-event@latest`
+
+
 # Currently stopped on
 https://fullstackopen.com/en/part5/testing_react_apps
-Clicking buttons in tests
+Tests for the Togglable component
 
 
 # A true full stack developer's oath
