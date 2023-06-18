@@ -1,71 +1,21 @@
 import { useState, useEffect, useRef } from 'react'
-import Footer from './components/Footer'
 import Note from './components/Note'
-import NoteForm from './components/NoteForm'
-import LoginForm from './components/Login'
-import Togglable from './components/Togglable'
 import Notification from './components/Notification'
+import Footer from './components/Footer'
+import LoginForm from './components/LoginForm'
+import NoteForm from './components/NoteForm'
+import Togglable from './components/Togglable'
 import noteService from './services/notes'
 import loginService from './services/login'
 
 const App = () => {
   const [notes, setNotes] = useState([])
   const [showAll, setShowAll] = useState(true)
-  const [newNote, setNewNote] = useState(
-    'a new note...'
-  )
   const [errorMessage, setErrorMessage] = useState(null)
 
-  const [username, setUsername] = useState('') 
-  const [password, setPassword] = useState('') 
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [user, setUser] = useState(null)
-
-  const noteFormRef = useRef()
-
-  const handleLogin = async (event) => {
-    event.preventDefault()
-    
-    try {
-      const user = await loginService.login({
-        username, password,
-      })
-      
-      window.localStorage.setItem(
-        'loggedNoteappUser', JSON.stringify(user)
-      ) 
-
-      noteService.setToken(user.token)
-      setUser(user)
-      setUsername('')
-      setPassword('')
-    } catch (exception) {
-      setErrorMessage('Wrong credentials')
-      setTimeout(() => {
-        setErrorMessage(null)
-      }, 5000)
-    }
-  }
-
-  const toggleImportanceOf = id => {
-    const note = notes.find(n => n.id === id)
-    const changedNote = { ...note, important: !note.important }
-  
-    noteService
-      .update(id, changedNote)
-      .then(returnedNote => {
-        setNotes(notes.map(note => note.id !== id ? note : returnedNote))
-      })
-
-    .catch(error => {
-      setErrorMessage(
-        `Note '${note.content}' was already removed from server`
-      )
-      setTimeout(() => {
-        setErrorMessage(null)
-      }, 5000)
-      setNotes(notes.filter(n => n.id !== id))
-      })
-  }
 
   useEffect(() => {
     noteService
@@ -84,65 +34,84 @@ const App = () => {
     }
   }, [])
 
-  console.log('render', notes.length, 'notes')
+  const noteFormRef = useRef()
 
-  const addNote = event => {
+  const handleLogin = async (event) => {
     event.preventDefault()
-    const noteObject = {
-      content: newNote,
-      important: Math.random() < 0.5,
+    try {
+      const user = await loginService.login({
+        username, password,
+      })
+      noteService.setToken(user.token)
+      window.localStorage.setItem(
+        'loggedNoteappUser', JSON.stringify(user)
+      )
+      setUser(user)
+      setUsername('')
+      setPassword('')
+    } catch (exception) {
+      setErrorMessage('wrong credentials')
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
     }
-  
-    noteFormRef.current.toggleVisibility()
+  }
+
+  const addNote = (noteObject) => {
     noteService
       .create(noteObject)
       .then(returnedNote => {
         setNotes(notes.concat(returnedNote))
+        noteFormRef.current.toggleVisibility()
       })
-  }
-
-  const handleNoteChange = (event) => {
-    console.log(event.target.value)
-    setNewNote(event.target.value)
   }
 
   const notesToShow = showAll
     ? notes
     : notes.filter(note => note.important)
 
-  const loginForm = () => {
-    return (
-      <Togglable buttonLabel='login'>
-        <LoginForm
-          username={username}
-          password={password}
-          handleUsernameChange={({ target }) => setUsername(target.value)}
-          handlePasswordChange={({ target }) => setPassword(target.value)}
-          handleSubmit={handleLogin}
-        />
-      </Togglable>
-    )
+  const toggleImportanceOf = id => {
+    const note = notes.find(n => n.id === id)
+    const changedNote = { ...note, important: !note.important }
+
+    noteService
+      .update(id, changedNote).then(returnedNote => {
+        setNotes(notes.map(note => note.id !== id ? note : returnedNote))
+      })
+      .catch(() => {
+        setErrorMessage(
+          `Note '${note.content}' was already removed from server`
+        )
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+        setNotes(notes.filter(n => n.id !== id))
+      })
   }
 
-  const noteForm = () => (
-      <Togglable buttonLabel='new note' ref={noteFormRef}>
-        <NoteForm
-          onSubmit={addNote}
-          value={newNote}
-          handleChange={handleNoteChange}
-        />
-      </Togglable>
-    )
-  
   return (
     <div>
-      <h1>Notes</h1>
+      <h1>Notes app</h1>
+
       <Notification message={errorMessage} />
-      
-      {!user && loginForm()} 
-      {user && <div>
-         <p>{user.name} logged in</p>
-           {noteForm()}
+
+      {!user &&
+        <Togglable buttonLabel="log in">
+          <LoginForm
+            username={username}
+            password={password}
+            handleUsernameChange={({ target }) => setUsername(target.value)}
+            handlePasswordChange={({ target }) => setPassword(target.value)}
+            handleSubmit={handleLogin}
+          />
+        </Togglable>
+      }
+      {user &&
+        <div>
+          <p>{user.name} logged in</p>
+          <Togglable buttonLabel="new note" ref={noteFormRef}>
+            <NoteForm createNote={addNote} />
+          </Togglable>
         </div>
       }
 
@@ -152,14 +121,15 @@ const App = () => {
         </button>
       </div>
       <ul>
-      {notesToShow.map(note => 
+        {notesToShow.map(note =>
           <Note
-          key={note.id}
-          note={note} 
-          toggleImportance={() => toggleImportanceOf(note.id)}
-        />
+            key={note.id}
+            note={note}
+            toggleImportance={() => toggleImportanceOf(note.id)}
+          />
         )}
       </ul>
+
       <Footer />
     </div>
   )

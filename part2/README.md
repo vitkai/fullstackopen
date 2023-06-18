@@ -134,6 +134,9 @@ For Windows (PowerShell) users
 `$env:CI=$true; npm test`
 `$env:CI=$true; npm test -- src/components/Note.test.js`
 
+#### Identify test coverage
+`$env:CI=$true; npm test -- --coverage`
+
 ### user-event 
 makes simulating user input a bit easier
 `npm install --save-dev @testing-library/user-event`
@@ -155,7 +158,7 @@ It was required to execute
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/testing_react_apps
-About finding the elements
+Test coverage
 
 
 # A true full stack developer's oath
