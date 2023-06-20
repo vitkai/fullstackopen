@@ -12,7 +12,8 @@
     "deploy:full": "npm run build:ui && npm run deploy",
     "app:open": "gcloud app browse",
     "lint": "eslint .",
-    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "start:test": "cross-env NODE_ENV=test node index.js"
   },
   "author": "Vitkai",
   "license": "ISC",

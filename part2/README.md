@@ -155,10 +155,35 @@ To fix the below issue
 It was required to execute 
 `npm install --save-dev @testing-library/user-event@latest`
 
+### E2E tests
+#### Cypress
+installing Cypress to the frontend as a development dependency
+
+`npm install --save-dev cypress`
+
+adding an npm-script to run it:
+
+```
+{
+  // ...
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
+  },
+  // ...
+}
+```
+##### Run cypress
+`npm run cypress:open`
+
 
 # Currently stopped on
-https://fullstackopen.com/en/part5/testing_react_apps
-Test coverage
+https://fullstackopen.com/en/part5/end_to_end_testing
+Cypress
+ installing eslint-plugin-cypress
 
 
 # A true full stack developer's oath
