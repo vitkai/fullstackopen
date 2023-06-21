@@ -179,6 +179,24 @@ adding an npm-script to run it:
 ##### Run cypress
 `npm run cypress:open`
 
+##### Run cypress from the command line
+It is also possible to run them from the command line. We just have to add an npm script for it:
+
+```
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "json-server -p3001 --watch db.json",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
+  },
+```
+
+Now we can run our tests from the command line with the command 
+`npm run test:e2e`
+
 ### eslint-plugin-cypress
 installing
 `npm install eslint-plugin-cypress --save-dev`
@@ -186,7 +204,7 @@ installing
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/end_to_end_testing
-Changing the importance of a note
+Exercises 5.17.-5.23
 
 
 # A true full stack developer's oath
