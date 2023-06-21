@@ -179,11 +179,14 @@ adding an npm-script to run it:
 ##### Run cypress
 `npm run cypress:open`
 
+### eslint-plugin-cypress
+installing
+`npm install eslint-plugin-cypress --save-dev`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/end_to_end_testing
-Cypress
- installing eslint-plugin-cypress
+Writing to a form
 
 
 # A true full stack developer's oath
