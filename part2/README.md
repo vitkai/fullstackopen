@@ -186,7 +186,7 @@ installing
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/end_to_end_testing
-Bypassing the UI
+Changing the importance of a note
 
 
 # A true full stack developer's oath
