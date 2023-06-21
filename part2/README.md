@@ -186,7 +186,7 @@ installing
 
 # Currently stopped on
 https://fullstackopen.com/en/part5/end_to_end_testing
-Failed login test
+Bypassing the UI
 
 
 # A true full stack developer's oath
