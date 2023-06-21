@@ -19,6 +19,15 @@ describe('Note app', function() {
       cy.contains('log in').click()
   })
 
+  it.only('login fails with wrong password', function() {
+    cy.contains('log in').click()
+    cy.get('#username').type('mluukkai')
+    cy.get('#password').type('wrong')
+    cy.get('#login-button').click()
+
+    cy.get('.error').contains('wrong credentials')
+  })
+  
   it('user can log in', function() {
     cy.contains('log in').click()
     cy.get('#username').type('mluukkai')
