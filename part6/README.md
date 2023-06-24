@@ -93,4 +93,4 @@ install react-redux
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/flux_architecture_and_redux
-Forwarding Redux Store to various components
+More components
