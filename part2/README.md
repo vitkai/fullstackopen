@@ -203,8 +203,8 @@ installing
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part5/end_to_end_testing
-Exercises 5.17.-5.23
+https://fullstackopen.com/en/part6/flux_architecture_and_redux
+Redux
 
 
 # A true full stack developer's oath
