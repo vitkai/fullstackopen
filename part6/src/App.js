@@ -1,3 +1,6 @@
+import NewNote from './components/NewNote'
+import Notes from './components/Notes'
+
 const App = () => {
 
   return (
@@ -7,3 +10,4 @@ const App = () => {
     </div>
   )
 }
+export default App
