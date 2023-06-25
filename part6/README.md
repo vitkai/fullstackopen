@@ -93,4 +93,4 @@ install react-redux
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/many_reducers
-Finishing the filters
+Exercise 6.9
