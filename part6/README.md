@@ -96,6 +96,24 @@ Redux's configuration and state management implementation requires quite a lot o
 install the library:
 `npm install @reduxjs/toolkit`
 
+## json-server
+install 
+`npm install json-server --save-dev`
+
+add the following line to the scripts part of the file package.json
+
+```
+"scripts": {
+  "server": "json-server -p3001 --watch db.json",
+  // ...
+}
+```
+
+Now let's launch json-server with the command 
+`npm run server`
+
+
+
 # Currently stopped on
-https://fullstackopen.com/en/part6/many_reducers
-Redux Toolkit
+https://fullstackopen.com/en/part6/communicating_with_server_in_a_redux_application
+Getting data from the backend
