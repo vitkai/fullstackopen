@@ -92,5 +92,5 @@ install react-redux
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part6/flux_architecture_and_redux
-More components
+https://fullstackopen.com/en/part6/many_reducers
+Finishing the filters
