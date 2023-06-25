@@ -112,6 +112,9 @@ add the following line to the scripts part of the file package.json
 Now let's launch json-server with the command 
 `npm run server`
 
+## add axios to the project
+`npm install axios`
+
 
 
 # Currently stopped on
