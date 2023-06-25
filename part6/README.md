@@ -119,4 +119,4 @@ Now let's launch json-server with the command
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/communicating_with_server_in_a_redux_application
-Sending data to the backend
+Asynchronous actions and Redux thunk
