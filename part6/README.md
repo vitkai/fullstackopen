@@ -90,7 +90,12 @@ the newest, and possibly the easiest way is using the hooks API of the react-red
 install react-redux
 `npm install react-redux`
 
+## Redux Toolkit
+Redux's configuration and state management implementation requires quite a lot of effort. For example in the reducer and action creator-related code which has somewhat repetitive boilerplate code. Redux Toolkit solves these common Redux-related problems, for example greatly simplifies the configuration of the Redux store and offers a large variety of tools to ease state management.
+
+install the library:
+`npm install @reduxjs/toolkit`
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/many_reducers
-Exercise 6.9
+Redux Toolkit
