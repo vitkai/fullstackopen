@@ -11,11 +11,6 @@
       "id": 2
     },
     {
-      "content": "sdfb",
-      "important": false,
-      "id": 3
-    },
-    {
       "content": "combineReducers forms one reducer from many simple reducers",
       "important": false,
       "id": 4
