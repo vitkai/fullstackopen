@@ -74,48 +74,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Course steps
-## redux
-install redux with the command
-
-`npm install redux`
-
-## deep-freeze
-can be used to ensure that the reducer has been correctly defined as an immutable function. 
-Let's install the library as a development dependency
-`npm install --save-dev deep-freeze`
-
-
-## react-redux
-the newest, and possibly the easiest way is using the hooks API of the react-redux library
-install react-redux
-`npm install react-redux`
-
-## Redux Toolkit
-Redux's configuration and state management implementation requires quite a lot of effort. For example in the reducer and action creator-related code which has somewhat repetitive boilerplate code. Redux Toolkit solves these common Redux-related problems, for example greatly simplifies the configuration of the Redux store and offers a large variety of tools to ease state management.
-
-install the library:
-`npm install @reduxjs/toolkit`
-
-## json-server
-install 
-`npm install json-server --save-dev`
-
-add the following line to the scripts part of the file package.json
-
-```
-"scripts": {
-  "server": "json-server -p3001 --watch db.json",
-  // ...
-}
-```
-
-Now let's launch json-server with the command 
-`npm run server`
-
-## add axios to the project
-`npm install axios`
-
+## React Query 
+library to store and manage data retrieved from the server.
+Install 
+`npm install react-query`
 
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/react_query_use_reducer_and_the_context
+Managing data on the server with the React Query library
