@@ -82,4 +82,4 @@ Install
 
 # Currently stopped on
 https://fullstackopen.com/en/part6/react_query_use_reducer_and_the_context
-Managing data on the server with the React Query library
+Optimizing the performance
