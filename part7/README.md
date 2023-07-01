@@ -71,7 +71,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Course steps
-
+## React Router 
+install with the command
+`npm install react-router-dom`
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/react_router
