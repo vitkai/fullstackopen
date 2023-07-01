@@ -1,6 +1,3 @@
-# Part6 Tutorial
-https://fullstackopen.com/en/part6/
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -74,10 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Course steps
-## React Query 
-library to store and manage data retrieved from the server.
-Install 
-`npm install react-query`
 
 
 # Currently stopped on
