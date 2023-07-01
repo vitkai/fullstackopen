@@ -77,4 +77,4 @@ install with the command
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/react_router
-Parameterized route
+Parameterized route revisited
