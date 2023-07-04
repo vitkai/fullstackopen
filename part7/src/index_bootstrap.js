@@ -1,15 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-import { Alert, Button, Form, Nav, Navbar } from 'react-bootstrap'
-import {
-  Container,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Paper,
-} from '@mui/material'
+import { Alert, Button, Form, Nav, Navbar, Table } from 'react-bootstrap'
 
 import {
   BrowserRouter as Router,
@@ -44,23 +35,22 @@ const Note = ({ note }) => {
 const Notes = ({ notes }) => (
   <div>
     <h2>Notes</h2>
-
-    <TableContainer component={Paper}>
-      <Table>
-        <TableBody>
-          {notes.map(note => (
-            <TableRow key={note.id}>
-              <TableCell>
-                <Link to={`/notes/${note.id}`}>{note.content}</Link>
-              </TableCell>
-              <TableCell>
-                {note.user}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Table striped>
+      <tbody>
+        {notes.map(note =>
+          <tr key={note.id}>
+            <td>
+              <Link to={`/notes/${note.id}`}>
+                {note.content}
+              </Link>
+            </td>
+            <td>
+              {note.user}
+            </td>
+          </tr>
+        )}
+      </tbody>
+    </Table>
   </div>
 )
 
@@ -152,7 +142,6 @@ const App = () => {
   }
 
   return (
-    <Container>
     <div className="container">
       {(message &&
       <Alert variant="success">
@@ -193,7 +182,6 @@ const App = () => {
         <em>Note app, Department of Computer Science 2023</em>
       </div>
     </div>
-    </Container>
   )
 }
 

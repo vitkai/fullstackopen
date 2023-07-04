@@ -79,6 +79,11 @@ install with the command
 install
 `npm install react-bootstrap`
 
+# MaterialUI React 
+library that implements the Material Design visual language developed by Google.
+Install the library with the command
+`npm install @mui/material @emotion/react @emotion/styled`
+
 # Currently stopped on
 https://fullstackopen.com/en/part7/more_about_styles
-Navigation structure
+Material UI
