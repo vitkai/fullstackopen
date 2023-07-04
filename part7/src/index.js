@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-import { Alert, Button, Nav, Navbar } from 'react-bootstrap'
+import { Button, Nav, Navbar } from 'react-bootstrap'
 import {
+  Alert, 
   Container,
   Table,
   TableBody,
@@ -152,11 +153,13 @@ const App = () => {
   return (
     <Container>
     <div className="container">
+    <div>
       {(message &&
-      <Alert variant="success">
-        {message}
-      </Alert>
+        <Alert severity="success">
+          {message}
+        </Alert>
       )}
+    </div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
