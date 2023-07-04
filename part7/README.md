@@ -81,4 +81,4 @@ install
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/more_about_styles
-React Bootstrap
+Navigation structure

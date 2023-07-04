@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-import { Button, Form, Table } from 'react-bootstrap'
+import { Alert, Button, Form, Table } from 'react-bootstrap'
 
 import {
   BrowserRouter as Router,
@@ -120,6 +120,7 @@ const App = () => {
   ])
 
   const [user, setUser] = useState(null)
+  const [message, setMessage] = useState(null)
 
   const match = useMatch('/notes/:id')
 
@@ -130,6 +131,10 @@ const App = () => {
 
   const login = (user) => {
     setUser(user)
+    setMessage(`welcome ${user}`)
+    setTimeout(() => {
+      setMessage(null)
+    }, 10000)
   }
 
   const padding = {
@@ -138,6 +143,11 @@ const App = () => {
 
   return (
     <div className="container">
+      {(message &&
+      <Alert variant="success">
+        {message}
+      </Alert>
+      )}
       <div>
         <Link style={padding} to="/">home</Link>
         <Link style={padding} to="/notes">notes</Link>
