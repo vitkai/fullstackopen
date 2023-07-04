@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-import { Alert, Button, Form, Nav, Navbar } from 'react-bootstrap'
+import { Alert, Button, Nav, Navbar } from 'react-bootstrap'
 import {
   Container,
   Table,
@@ -9,6 +9,7 @@ import {
   TableContainer,
   TableRow,
   Paper,
+  TextField
 } from '@mui/material'
 
 import {
@@ -87,22 +88,19 @@ const Login = (props) => {
   return (
     <div>
       <h2>login</h2>
-      <Form onSubmit={onSubmit}>
-        <Form.Group>
-          <Form.Label>username:</Form.Label>
-          <Form.Control
-            type="text"
-            name="username"
-          />
-          <Form.Label>password:</Form.Label>
-          <Form.Control
-            type="password"
-          />
-          <Button variant="primary" type="submit">
+      <form onSubmit={onSubmit}>
+        <div>
+          <TextField label="username" />
+        </div>
+        <div>
+          <TextField label="password" type='password' />
+        </div>
+        <div>
+          <Button variant="contained" color="primary" type="submit">
             login
           </Button>
-        </Form.Group>
-      </Form>
+        </div>
+      </form>
     </div>
   )
 }
