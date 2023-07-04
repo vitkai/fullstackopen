@@ -86,5 +86,4 @@ Install the library with the command
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/more_about_styles
-Material UI
-Notification
+Closing thoughts
