@@ -75,6 +75,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 install with the command
 `npm install react-router-dom`
 
+## React Bootstrap
+install
+`npm install react-bootstrap`
+
 # Currently stopped on
-https://fullstackopen.com/en/part7/react_router
-Parameterized route revisited
+https://fullstackopen.com/en/part7/more_about_styles
+React Bootstrap
