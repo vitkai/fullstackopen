@@ -85,5 +85,4 @@ Install the library with the command
 `npm install @mui/material @emotion/react @emotion/styled`
 
 # Currently stopped on
-https://fullstackopen.com/en/part7/more_about_styles
-Styled components
+https://fullstackopen.com/en/part7/webpack
