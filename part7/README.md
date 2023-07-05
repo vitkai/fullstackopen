@@ -86,4 +86,4 @@ Install the library with the command
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/more_about_styles
-Closing thoughts
+Styled components
