@@ -30,6 +30,16 @@ plugin that contains everything needed to take code using all of the latest feat
 install the preset with the command:
 `npm install @babel/preset-env --save-dev`
 
+### style loader 
+to generate and inject a style element that contains all of the styles of the application.
+
+With this configuration, the CSS definitions are included in the main.js file of the application. For this reason, there is no need to separately import the CSS styles in the main index.html file of the application.
+
+If needed, the application's CSS can also be generated into its own separate file by using the mini-css-extract-plugin.
+
+install the loaders:
+`npm install style-loader css-loader --save-dev`
+
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
-CSS
+Webpack-dev-server
