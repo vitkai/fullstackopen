@@ -40,6 +40,14 @@ If needed, the application's CSS can also be generated into its own separate fil
 install the loaders:
 `npm install style-loader css-loader --save-dev`
 
+### webpack-dev-server
+Every time we make a change to the code, we have to bundle it and refresh the browser to test the code.
+The webpack-dev-server offers a solution to our problems. 
+
+install it with the command:
+`npm install --save-dev webpack-dev-server`
+
+
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
 Webpack-dev-server
