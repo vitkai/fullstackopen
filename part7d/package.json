@@ -4,6 +4,7 @@
   "description": "practising webpack",
   "scripts": {
     "build": "webpack --mode=development",
+    "build_prd": "webpack --mode=production",
     "start": "webpack serve --mode=development"
   },
   "license": "MIT",
