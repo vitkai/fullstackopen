@@ -50,4 +50,4 @@ install it with the command:
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
-Webpack-dev-server
+Source maps
