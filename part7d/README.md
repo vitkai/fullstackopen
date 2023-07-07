@@ -24,8 +24,12 @@ Let's install the loader and its required packages as a development dependency:
 core-js and regenerator-runtime:
 `npm install core-js regenerator-runtime`
 
+### @babel/preset-env 
+plugin that contains everything needed to take code using all of the latest features and transpile it to code that is compatible with the ES5 standard
 
+install the preset with the command:
+`npm install @babel/preset-env --save-dev`
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
-Transpilers
+CSS
