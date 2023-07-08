@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --mode=development",
     "build_prd": "webpack --mode=production",
-    "start": "webpack serve --mode=development"
+    "start": "webpack serve --mode=development",
+    "start_prd": "webpack serve --mode=production"
   },
   "license": "MIT",
   "devDependencies": {

@@ -50,6 +50,9 @@ install it with the command:
 ## Development and production configuration
 install axios, start the json-server, and then make the necessary changes to the application
 
+We can inspect the bundled production version of the application locally by executing the following command in the build directory:
+`npx static-server`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
