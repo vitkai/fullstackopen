@@ -47,7 +47,10 @@ The webpack-dev-server offers a solution to our problems.
 install it with the command:
 `npm install --save-dev webpack-dev-server`
 
+## Development and production configuration
+install axios, start the json-server, and then make the necessary changes to the application
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part7/webpack
-Minifying the code
+Development and production configuration
