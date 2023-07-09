@@ -55,5 +55,5 @@ We can inspect the bundled production version of the application locally by exec
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part7/webpack
-Development and production configuration
+https://fullstackopen.com/en/part8/graph_ql_server
+Apollo Server
