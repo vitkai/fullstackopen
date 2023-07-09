@@ -14,4 +14,4 @@ by running in the terminal:
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/graph_ql_server
-Mutations
+Error handling
