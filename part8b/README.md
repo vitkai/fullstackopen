@@ -80,4 +80,4 @@ install the dependencies required by Apollo client.
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/react_and_graph_ql
-Apollo client
+Making queries
