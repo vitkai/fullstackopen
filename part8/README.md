@@ -14,4 +14,4 @@ by running in the terminal:
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/react_and_graph_ql
-Apollo client
+Making queries
