@@ -77,9 +77,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 install the dependencies required by Apollo client.
 `npm install @apollo/client graphql`
 
-## Mongoose
+## Mongoose and dotenv
 Install Mongoose and dotenv:
 `npm install mongoose dotenv`
+
+## cross-env package
+install
+`npm install --save-dev cross-env`
+
+## nodemon for autorestsrt of the server
+Install
+`npm install --save-dev nodemon`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/database_and_user_administration
