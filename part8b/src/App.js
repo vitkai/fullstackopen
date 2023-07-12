@@ -2,7 +2,19 @@ import { useState } from 'react'
 import { useQuery } from '@apollo/client'
 import Persons from './modules/Persons'
 import PersonForm from './modules/PersonForm'
+import PhoneForm from './modules/PhoneForm'
 import { ALL_PERSONS } from './services/queries'
+
+const Notify = ({errorMessage}) => {
+  if ( !errorMessage ) {
+    return null
+  }
+  return (
+    <div style={{color: 'red'}}>
+    {errorMessage}
+    </div>
+  )
+}
 
 const App = () => {
   const [errorMessage, setErrorMessage] = useState(null)
@@ -27,17 +39,7 @@ const App = () => {
       <Notify errorMessage={errorMessage} />
       <Persons persons={result.data.allPersons}/>
       <PersonForm setError={notify} />
-    </div>
-  )
-}
-
-const Notify = ({errorMessage}) => {
-  if ( !errorMessage ) {
-    return null
-  }
-  return (
-    <div style={{color: 'red'}}>
-    {errorMessage}
+      <PhoneForm setError={notify} />
     </div>
   )
 }
