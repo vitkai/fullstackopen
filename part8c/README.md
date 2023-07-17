@@ -89,7 +89,11 @@ install
 Install
 `npm install --save-dev nodemon`
 
+## jsonwebtoken
+Install
+`npm install jsonwebtoken`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/database_and_user_administration
-User and log in
+Friends list
