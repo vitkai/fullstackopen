@@ -93,7 +93,9 @@ Install
 Install
 `npm install jsonwebtoken`
 
+# Run
+`node index.js`
+
 
 # Currently stopped on
-https://fullstackopen.com/en/part8/database_and_user_administration
-Friends list
+https://fullstackopen.com/en/part8/login_and_updating_the_cache

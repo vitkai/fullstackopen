@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useQuery } from '@apollo/client'
-import { FIND_PERSON } from '../services/queries'
 
+import { FIND_PERSON } from '../services/queries'
 
 const Person = ({ person, onClose }) => {
   return (
@@ -17,13 +17,11 @@ const Person = ({ person, onClose }) => {
 }
 
 const Persons = ({ persons }) => {
-
   const [nameToSearch, setNameToSearch] = useState(null)
   const result = useQuery(FIND_PERSON, {
     variables: { nameToSearch },
     skip: !nameToSearch,
   })
-
 
   if (nameToSearch && result.data) {
     return (
@@ -37,15 +35,14 @@ const Persons = ({ persons }) => {
   return (
     <div>
       <h2>Persons</h2>
-      {persons.map((p) => (
+      {persons.map(p =>
         <div key={p.name}>
-          {p.name} {p.phone} 
-
+          {p.name} {p.phone}
           <button onClick={() => setNameToSearch(p.name)}>
             show address
           </button>
-        </div>
-      ))}
+        </div>  
+      )}
     </div>
   )
 }

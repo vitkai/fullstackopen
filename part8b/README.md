@@ -81,6 +81,10 @@ install the dependencies required by Apollo client.
 Install Mongoose and dotenv:
 `npm install mongoose dotenv`
 
+# Run
+`npm start`
+
+
 # Currently stopped on
 https://fullstackopen.com/en/part8/database_and_user_administration
 Validation
