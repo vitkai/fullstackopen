@@ -86,5 +86,5 @@ Install Mongoose and dotenv:
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part8/database_and_user_administration
-Validation
+https://fullstackopen.com/en/part8/login_and_updating_the_cache
+ValidationUpdating cache, revisited
