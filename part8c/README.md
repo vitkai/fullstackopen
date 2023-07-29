@@ -98,4 +98,5 @@ Install
 
 
 # Currently stopped on
-https://fullstackopen.com/en/part8/login_and_updating_the_cache
+https://fullstackopen.com/en/part8/fragments_and_subscriptions
+Refactoring the backend
