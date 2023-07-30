@@ -102,7 +102,12 @@ Let us install Express
 
 `npm install express cors`
 
+# install packages for adding subscriptions to GraphQL and a Node.js WebSocket library:
+
+`npm install graphql-ws ws @graphql-tools/schema`
+
+`npm install graphql-subscriptions`
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/fragments_and_subscriptions
-Refactoring the backend
+Subscriptions on the server
