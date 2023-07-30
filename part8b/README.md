@@ -81,10 +81,13 @@ install the dependencies required by Apollo client.
 Install Mongoose and dotenv:
 `npm install mongoose dotenv`
 
+## WebSockets
+`npm install graphql-ws`
+
 # Run
 `npm start`
 
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/fragments_and_subscriptions
-Refactoring the backend
+Subscriptions on the client
