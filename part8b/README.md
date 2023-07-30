@@ -84,10 +84,13 @@ Install Mongoose and dotenv:
 ## WebSockets
 `npm install graphql-ws`
 
+## apollo-link-context
+`npm install apollo-link-context`
+
 # Run
 `npm start`
 
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/fragments_and_subscriptions
-Subscriptions on the client
+n+1 problem
