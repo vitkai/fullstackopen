@@ -96,6 +96,12 @@ Install
 # Run
 `node index.js`
 
+ # expressMiddleware function 
+ As the name of the function already suggests, it is an Express middleware, which means that Express must also be configured for the application, with the GraphQL server acting as middleware.
+Let us install Express
+
+`npm install express cors`
+
 
 # Currently stopped on
 https://fullstackopen.com/en/part8/fragments_and_subscriptions

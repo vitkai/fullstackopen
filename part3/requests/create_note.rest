@@ -5,7 +5,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb
 {
     "content": "Testing with Authorization 2",
     "important": true,
-    "userId": "648039acda4a7efc26015083"
+    "userId": "64c4a1c815eb99c51c962578"
 }
 
 ###
@@ -15,7 +15,7 @@ GET  http://localhost:3001/api/notes
 DELETE  http://localhost:3001/api/notes/648230c4431d868d8a889774
 
 ###
-PUT  http://localhost:3001/api/notes/6455fbca119382ba1b528236
+PUT  http://localhost:3001/api/notes/64c4a35a15eb99c51c962584
 Content-Type: application/json
 
 {
