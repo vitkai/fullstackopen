@@ -109,5 +109,4 @@ Let us install Express
 `npm install graphql-subscriptions`
 
 # Currently stopped on
-https://fullstackopen.com/en/part8/fragments_and_subscriptions
-Subscriptions on the server
+https://fullstackopen.com/en/part9/background_and_introduction
