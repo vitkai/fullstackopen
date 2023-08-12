@@ -12,6 +12,8 @@ As we recall from part 3, an npm project is set by running the command
 Then we can install the dependencies by running
 `npm install --save-dev ts-node typescript`
 
+### Types package
+`npm install --save-dev @types/node`
 
 # Run
 `npm run ts-node`
@@ -25,4 +27,4 @@ https://www.typescriptlang.org/play/index.html
 
 # Currently stopped on
 https://fullstackopen.com/en/part9/first_steps_with_type_script
-Type narrowing
+Accessing command line arguments
