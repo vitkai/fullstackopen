@@ -27,4 +27,4 @@ https://www.typescriptlang.org/play/index.html
 
 # Currently stopped on
 https://fullstackopen.com/en/part9/first_steps_with_type_script
-Accessing command line arguments
+Improving the project
