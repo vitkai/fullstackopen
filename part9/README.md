@@ -28,6 +28,9 @@ To simplify the development, we should enable auto-reloading to improve our work
 Let's install ts-node-dev to our development dependencies:
 `npm install --save-dev ts-node-dev`
 
+### install ESlint and its TypeScript extensions:
+`npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+
 
 # Run
 `npm run ts-node`
@@ -41,4 +44,4 @@ https://www.typescriptlang.org/play/index.html
 
 # Currently stopped on
 https://fullstackopen.com/en/part9/first_steps_with_type_script
-The horrors of any
+Type assertion

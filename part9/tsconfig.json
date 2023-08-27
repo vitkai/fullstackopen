@@ -3,7 +3,7 @@
       "strict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
-      "noImplicitReturns": true,
+      "noImplicitReturns": false,
       "noFallthroughCasesInSwitch": true,
       "noImplicitAny": true,
       "esModuleInterop": true,
