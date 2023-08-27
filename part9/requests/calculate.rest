@@ -2,7 +2,27 @@ POST http://localhost:3003/calculate
 Content-Type: application/json
 
 {
-    "a": "2",
-    "b": "5",
+    "value1": "2",
+    "value2": "5",
+    "op": "divide"
+}
+
+###
+POST http://localhost:3003/calculate
+Content-Type: application/json
+
+{
+    "value1": "2",
+    "value2": "5",
+    "op": "add"
+}
+
+###
+POST http://localhost:3003/calculate
+Content-Type: application/json
+
+{
+    "value1": "2",
+    "value2": "5",
     "op": "multiply"
 }

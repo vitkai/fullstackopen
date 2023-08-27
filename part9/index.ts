@@ -9,7 +9,6 @@ app.get('/ping', (_req, res) => {
 
 app.post('/calculate', (req, res) => {
   console.log(`Request body: ${req.body}`)
-  console.log(`Request params name: ${req.params}`)
   
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { value1, value2, op } = req.body;
