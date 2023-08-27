@@ -39,6 +39,18 @@ Also, since this is a real project, which is intended to be grown over time, we 
 
 # Let there be code
 
+# Run
+`npm run dev`
+
+## Run tsc build
+`npm run tsc`
+
+## Run checks
+`npm run lint`
+
+## Production mode
+`npm start`
+
 # Currently stopped on
 https://fullstackopen.com/en/part9/typing_an_express_app
-Let there be code
+Implementing the functionality
