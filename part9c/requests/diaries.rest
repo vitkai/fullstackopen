@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/diaries
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/diaries/2
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/api/diaries
+Content-Type: application/json
+
+{
+  "weather": "stormy",
+  "visibility": "ok",
+  "date": "2017-05-01",
+  "comment": "Post request test"
+}
