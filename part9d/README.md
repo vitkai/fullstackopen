@@ -12,3 +12,4 @@ in the application's root
 
 # Currently stopped on
 https://fullstackopen.com/en/part9/react_with_types
+React components with TypeScript
