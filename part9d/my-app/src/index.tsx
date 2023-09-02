@@ -1,65 +1,41 @@
-import ReactDOM from 'react-dom/client'
+interface Note {
+    id: number,
+    content: string
+  }
+  
+  import { useState } from "react";
+  
+  const App = () => {
+    const [notes, setNotes] = useState<Note[]>([
+  
+      { id: 1, content: 'testing' }
+    ]);
+    const [newNote, setNewNote] = useState('');
+  
+    const noteCreation = (event: React.SyntheticEvent) => {
+        event.preventDefault()
+        const noteToAdd = {
+          content: newNote,
+          id: notes.length + 1
+        }
+        setNotes(notes.concat(noteToAdd));
+        setNewNote('')
+      };
 
-interface CoursePartBase {
-  name: string;
-  exerciseCount: number;
-}
-
-interface CoursePartBasic extends CoursePartBase {
-  description: string;
-  kind: "basic"
-}
-
-interface CoursePartGroup extends CoursePartBase {
-  groupProjectCount: number;
-  kind: "group"
-}
-
-interface CoursePartBackground extends CoursePartBase {
-  description: string;
-  backgroundMaterial: string;
-  kind: "background"
-}
-
-type CoursePart = CoursePartBasic | CoursePartGroup | CoursePartBackground;
-
-const courseName = "Half Stack application development";
-  const courseParts: CoursePart[] = [
-    {
-      name: "Fundamentals",
-      exerciseCount: 10,
-      description: "This is an awesome course part",
-      kind: "basic"
-    },
-    {
-      name: "Using props to pass data",
-      exerciseCount: 7,
-      groupProjectCount: 3,
-      kind: "group"
-    },
-    {
-      name: "Basics of type Narrowing",
-      exerciseCount: 7,
-      description: "How to go from unknown to string",
-      kind: "basic"
-    },
-    {
-      name: "Deeper type usage",
-      exerciseCount: 14,
-      description: "Confusing description",
-      backgroundMaterial: "https://type-level-typescript.com/template-literal-types",
-      kind: "background"
-    },
-  ]
-
-interface WelcomeProps {
-  name: string;
-}
-
-const Welcome = (props: WelcomeProps)  => {
-  return <h1>Hello, {props.name}</h1>;
-};
-
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Welcome name="Sarah" />
-)
+    return (
+      <div>
+        <form onSubmit={noteCreation}>
+          <input
+            value={newNote}
+            onChange={(event) => setNewNote(event.target.value)} 
+          />
+          <button type='submit'>add</button>
+        </form>
+        <ul>
+          {notes.map(note =>
+            <li key={note.id}>{note.content}</li>
+          )}
+        </ul>
+      </div>
+    )
+  }
