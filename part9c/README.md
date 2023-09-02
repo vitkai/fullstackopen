@@ -52,5 +52,4 @@ Also, since this is a real project, which is intended to be grown over time, we 
 `npm start`
 
 # Currently stopped on
-https://fullstackopen.com/en/part9/typing_an_express_app
-Enum
+https://fullstackopen.com/en/part9/react_with_types
